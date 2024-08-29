@@ -295,7 +295,7 @@ See [this guide](../how-tos/persistence.ipynb) for how to use threads.
 
 ## Checkpointer state
 
- When interacting with the checkpointer state, you must specify a [thread identifier](#threads).Each checkpoint saved by the checkpointer has two properties:
+ When interacting with the checkpointer state, you must specify a [thread identifier](#threads). Each checkpoint saved by the checkpointer has two properties:
 
 - **values**: This is the value of the state at this point in time.
 - **next**: This is a tuple of the nodes to execute next in the graph.
@@ -417,7 +417,7 @@ Read [this how-to] to learn more about how the recursion limit works.
 
 It can often be useful to set breakpoints before or after certain nodes execute. This can be used to wait for human approval before continuing. These can be set when you ["compile" a graph](#compiling-your-graph). You can set breakpoints either _before_ a node executes (using `interrupt_before`) or after a node executes (using `interrupt_after`.)
 
-You **MUST** use a [checkpoiner](#checkpointer) when using breakpoints. This is because your graph needs to be able to resume execution.
+You **MUST** use a [checkpointer](#checkpointer) when using breakpoints. This is because your graph needs to be able to resume execution.
 
 In order to resume execution, you can just invoke your graph with `None` as the input.
 
